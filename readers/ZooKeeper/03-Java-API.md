@@ -8,7 +8,7 @@
 	
 sessionTimeout单位为毫秒，
 
-Watcher 是个借口，通过这个接口可以收到session建立或者断开的事件，
+Watcher 是个借(接)口，通过这个接口可以收到session建立或者断开的事件，
 
 同样地，也能监视ZK数据的变化。
 
@@ -53,7 +53,11 @@ ZK的操作都提供了异步操作版本，有了异步版本后，可以消除
 
 比如create的异步操作，
 
-	void create(String path, byte[] data,	        List<ACL> acl,	        CreateMode createMode,	        AsyncCallback.StringCallback cb,	        Object ctx)
+	void create(String path, byte[] data,
+	        List<ACL> acl,
+	        CreateMode createMode,
+	        AsyncCallback.StringCallback cb,
+	        Object ctx)
 
 前四个参数和同步操作相同，多了个callback和用于上下文传递的ctx。
 
